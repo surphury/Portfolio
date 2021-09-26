@@ -1,0 +1,61 @@
+/* 
+======
+Header
+======
+*/
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-right: min(2%,2em);
+    padding-left: min(2%,2em);
+    min-height: 3rem;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    font-size: clamp(0.7rem, 3.2vw + 0.1rem, 1rem);
+    background-color: var(--secondary-bg-colour);
+
+    &__switcher {
+        border-radius: 50%;
+        border-width: 0;
+        &:hover {
+            box-shadow: 0 0 5px var(--txt-colour);
+            animation: rotate 2s infinite;
+        }
+    }
+
+    &__navbar {
+        margin-left: auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        column-gap: 2em;
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__link {
+        font-weight: 600;
+        text-decoration-line: none;
+        &:hover {
+            text-decoration-line: underline;
+            text-decoration-color: var(--primary-colour);
+        }
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotateZ(360deg);
+    }
+}

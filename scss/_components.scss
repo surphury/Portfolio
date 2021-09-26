@@ -1,0 +1,52 @@
+/*
+==========
+Components
+==========
+*/
+
+.button {
+    text-align: center;
+    background-color: var(--primary-colour);
+    color: var(--body-bg-colour);
+    padding: 0.5em 2em;
+    border-radius: 0.4em;
+    font-weight: 600;
+    text-decoration-line: none;
+    &:hover {
+        animation: shadow-inset-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+}
+
+.button--reverse {
+    color: var(--primary-colour);
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.tag {
+    background-color: var(--primary-colour);
+    color: var(--body-bg-colour);
+    border-radius: 1em;
+    padding: 0.2em 0.8em;
+    font-weight: 900;
+    font-size: 0.625rem;
+}
+
+.switcher {
+    border-width: 0;
+    transition: box-shadow 0.5s;
+
+    &:hover,
+    &:active {
+        box-shadow: 0 0 6px var(--txt-colour);
+    }
+}
+
+@keyframes shadow-inset-center {
+    0% {
+        box-shadow: inset 0 0 0 0;
+    }
+    100% {
+        box-shadow: inset 0 0 14px 0px;
+    }
+}
