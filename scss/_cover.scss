@@ -1,0 +1,32 @@
+.cover{
+    inset: 0;
+    position: fixed;
+    background-color: var(--secondary-bg-colour);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__spinner{
+        animation: rotate 1s infinite;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        border: 0.2em solid var(--txt-colour);
+        border-left: 0.2em dotted var(--primary-colour);
+
+        &:hover {
+            cursor: progress;
+        }
+    }
+}
+
+.cover--hidden{
+    animation: hide 700ms forwards;
+}
+
+@keyframes hide {
+    to{
+        opacity: 0;
+    }
+}
