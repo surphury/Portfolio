@@ -1,9 +1,3 @@
-/*
-==========
-Components
-==========
-*/
-
 .button {
     text-align: center;
     background-color: var(--primary-colour);
@@ -30,16 +24,6 @@ Components
     padding: 0.2em 0.8em;
     font-weight: 900;
     font-size: 0.625rem;
-}
-
-.switcher {
-    border-width: 0;
-    transition: box-shadow 0.5s;
-
-    &:hover,
-    &:active {
-        box-shadow: 0 0 6px var(--txt-colour);
-    }
 }
 
 @keyframes shadow-inset-center {
