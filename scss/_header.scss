@@ -1,9 +1,3 @@
-/* 
-======
-Header
-======
-*/
-
 .header {
     display: flex;
     align-items: center;
@@ -22,8 +16,8 @@ Header
         border-radius: 50%;
         border-width: 0;
         &:hover {
-            box-shadow: 0 0 5px var(--txt-colour);
-            animation: rotate 2s infinite;
+            border: 1px solid var(--txt-colour);
+            animation: rotate 1.5s infinite;
         }
     }
 
@@ -55,7 +49,16 @@ Header
 }
 
 @keyframes rotate {
-    to {
-        transform: rotateZ(360deg);
+    0%{
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(45deg);
+    }
+    50%{
+        transform: rotateZ(-45deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
     }
 }
