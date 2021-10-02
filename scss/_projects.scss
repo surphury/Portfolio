@@ -1,24 +1,18 @@
-/* 
-=============
-Projects area
-=============
-*/
-.projects {
-    .project {
-        border-radius: 0.5em;
-        background-color: var(--secondary-bg-colour);
-        padding: 1em;
+.projects{
+    display: grid;
+    row-gap: 1em;
+}
 
-        &__actions {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            column-gap: 1em;
-        }
-    }
+.project {
+    border-radius: 0.5em;
+    background-color: var(--secondary-bg-colour);
+    padding: 1em;
 
-    .project + .project {
-        margin-top: 1em;
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 1em;
     }
 }
 
