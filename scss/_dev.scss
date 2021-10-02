@@ -1,42 +1,37 @@
-/* 
-=================
-Developer Profile
-=================
-*/
-
 .dev {
     border-radius: 0.5em;
     background-color: var(--secondary-bg-colour);
     overflow: hidden;
 
-    .dev__title {
+    &__title {
         font-size: inherit;
         margin-top: 0;
         margin-bottom: 0;
         text-shadow: -1px -1px var(--primary-colour);
-        .dev__position{
-            display: block;
-        }
     }
 
-    .dev__container {
+    &__position {
+        display: block;
+    }
+
+    &__container {
         font-size: 0.9rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .dev__address {
+    &__address {
         display: flex;
         flex-direction: column;
     }
 
-    .dev__link {
+    &__link {
         display: block;
         text-decoration-line: none;
     }
 
-    .dev__body {
+    &__body {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -44,26 +39,26 @@ Developer Profile
         column-gap: 1em;
     }
 
-    .dev__image {
+    &__image {
         max-height: 6rem;
         max-width: 6rem;
         border-radius: 50%;
         object-fit: contain;
     }
 
-    .dev__skills {
+    &__skills {
         display: flex;
         justify-content: space-around;
     }
-    
-    .dev__skill {
+
+    &__skill {
         border-bottom-left-radius: 25%;
         border-bottom-right-radius: 25%;
         background-color: var(--primary-colour);
         cursor: help;
     }
 
-    .dev__actions {
+    &__actions {
         display: flex;
         justify-content: center;
         background-color: var(--primary-colour);
