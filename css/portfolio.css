@@ -185,34 +185,37 @@ address {
   height: 2em;
   z-index: 1;
 }
-.icon--html {
+.icon::before {
+  display: block;
+}
+.icon--html::before {
   content: url(../assets/images/icons/html.svg);
 }
-.icon--css {
+.icon--css::before {
   content: url(../assets/images/icons/css.svg);
 }
-.icon--javascript {
+.icon--javascript::before {
   content: url(../assets/images/icons/javascript.svg);
 }
-.icon--linkedin {
+.icon--linkedin::before {
   content: url(../assets/images/icons/linkedin.svg);
 }
-.icon--github {
+.icon--github::before {
   content: url(../assets/images/icons/github.svg);
 }
-.icon--git {
+.icon--git::before {
   content: url(../assets/images/icons/git.svg);
 }
-.icon--sass {
+.icon--sass::before {
   content: url(../assets/images/icons/sass.svg);
 }
-.icon--sun {
+.icon--sun::before {
   content: url(../assets/images/icons/sun.svg);
 }
-.icon--moon {
+.icon--moon::before {
   content: url(../assets/images/icons/moon.svg);
 }
-.icon--menu {
+.icon--menu::before {
   content: url(../assets/images/icons/menu.svg);
 }
 
@@ -390,11 +393,13 @@ address {
   }
 }
 .footer {
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--secondary-bg-colour);
   color: #999;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  text-align: center;
+  margin-top: 1em;
 }
 
 .cover {
@@ -436,8 +441,8 @@ address {
   }
 }
 .main {
-  padding: 1em;
-  max-width: 31.25em;
+  padding: 1em 1em 0;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -450,10 +455,4 @@ address {
     -moz-column-gap: 2em;
          column-gap: 2em;
   }
-}
-.dev__skill,
-.dev__actions,
-.tag,
-.button {
-  transition: --primary-colour 2s linear;
 }
