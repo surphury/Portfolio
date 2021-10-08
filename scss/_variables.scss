@@ -1,3 +1,9 @@
+@property --primary-colour {
+    syntax: '<color>';
+    initial-value: #ff935d;
+    inherits: true;
+}
+
 :root {
     box-sizing: border-box;
     --txt-colour: #d4d4d4;
@@ -9,8 +15,8 @@
     /* Minimum size 1 rem at a viewport width of 1500px.
     Maximum size 2 rem at a viewport width of 2800px. */
     font-size: clamp(1rem, 1.2vw - 0.2rem, 2rem);
-
 }
+
 
 .light-theme {
     --txt-colour: #000;
