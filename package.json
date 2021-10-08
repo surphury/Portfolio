@@ -4,7 +4,7 @@
   "description": "My personal portfolio",
   "main": "script.js",
   "scripts": {
-    "init": "sass -w scss:css"
+    "start": "sass -w scss:css"
   },
   "author": "Surphury",
   "license": "ISC",
