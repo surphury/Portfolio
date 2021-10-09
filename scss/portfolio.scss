@@ -24,3 +24,10 @@
         column-gap: 2em;
     }
 }
+
+.dev__skill,
+.dev__actions,
+.tag,
+.button {
+    transition: --primary-colour 2s linear;
+}
