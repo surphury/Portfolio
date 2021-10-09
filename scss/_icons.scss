@@ -5,13 +5,8 @@ $icon-list: html, css, javascript, linkedin, github, git, sass, sun, moon, menu;
     width: 2em;
     height: 2em;
     z-index: 1;
-
-    &::before {
-        display: block;
-    }
-
     @each $icon in $icon-list {
-        &--#{$icon}::before {
+        &--#{$icon} {
             content: url(../assets/images/icons/#{$icon}.svg);
         }
     }
