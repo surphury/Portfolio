@@ -14,6 +14,6 @@ localStorage.getItem('light-theme') && changeTheme();
 
 $switcher.addEventListener('click', changeTheme);
 
-const colours = ['','#a00', '#0a0', '#f55', '#808','#a0a'];
+const colours = ['#ff935d','#a00', '#0a0', '#f55', '#808','#a0a'];
 
 setInterval(() => $root.style.setProperty('--primary-colour',colours[Math.round(Math.random() * colours.length - 1)]), 20000);

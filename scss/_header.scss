@@ -1,24 +1,19 @@
 .header {
     display: flex;
     align-items: center;
-    padding-right: min(2%,2em);
-    padding-left: min(2%,2em);
+    padding-right: min(2%, 2em);
+    padding-left: min(2%, 2em);
     min-height: 3rem;
     position: sticky;
     top: 0;
     right: 0;
     left: 0;
     z-index: 2;
-    font-size: clamp(0.7rem, 3.2vw + 0.1rem, 1rem);
     background-color: var(--secondary-bg-colour);
 
     &__switcher {
         border-radius: 50%;
         border-width: 0;
-        &:hover {
-            border: 1px solid var(--txt-colour);
-            animation: rotate 1.5s infinite;
-        }
     }
 
     &__navbar {
@@ -41,24 +36,26 @@
     &__link {
         font-weight: 600;
         text-decoration-line: none;
-        &:hover {
-            text-decoration-line: underline;
-            text-decoration-color: var(--primary-colour);
+        position: relative;
+        &::before {
+            height: 0.016em;
+            content: "";
+            right: 0;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background-color: var(--primary-colour);
+            transform: scaleX(0);
+            transition: transform 400ms;
+        }
+        &:hover::before {
+            transform: scaleX(1);
         }
     }
 }
 
 @keyframes rotate {
-    0%{
-        transform: rotateZ(0deg);
-    }
-    25% {
-        transform: rotateZ(45deg);
-    }
-    50%{
-        transform: rotateZ(-45deg);
-    }
-    100%{
-        transform: rotateZ(0deg);
+    to {
+        transform: rotateZ(360deg);
     }
 }

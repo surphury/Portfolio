@@ -44,7 +44,6 @@ address {
     font-style: normal;
 }
 
-
 ::selection {
     color: var(--body-bg-colour);
     background-color: var(--txt-colour);
@@ -59,7 +58,7 @@ address {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-bg-colour);
+    background-color: var(--primary-colour);
 }
 
 ::-webkit-scrollbar-button {
@@ -69,14 +68,20 @@ address {
 :root {
     scroll-behavior: smooth;
     /* Scroll for Firefox */
-    scrollbar-color: var(--body-bg-colour) var(--secondary-bg-colour);
+    scrollbar-color: var(--primary-colour) var(--body-bg-colour);
     scroll-padding-top: 3.5rem;
 }
 
-:target {
-    outline: 1px solid var(--primary-colour);
+:focus-visible {
+    outline: 0.1em solid var(--primary-colour);
 }
 
-:focus-visible{
-    outline: 3px dotted var(--txt-colour);
+:target {
+    animation: mark-up 1s;
+}
+
+@keyframes mark-up {
+    to {
+        outline: 0.1em solid var(--primary-colour);
+    }
 }

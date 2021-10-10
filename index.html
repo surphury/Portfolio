@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Berrios | Frontend Web Developer</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/portfolio.css">
+    <script src="js/cover.js" defer></script>
+    <script src="js/portfolio.js" defer></script>
     <!-- MetaDatas -->
     <meta property='og:title' content='Surphury | Frontend Web Developer'>
     <meta property='og:type' content='website'>
@@ -23,7 +24,9 @@
 
 <body>
     <header class="header">
-        <button class="icon icon--sun icon--moon header__switcher" id="switcher" title="Switch theme"></button>
+        <button class="header__switcher"  title="Switch theme">
+            <span class="icon icon--sun icon--moon" id="switcher"></span>
+        </button>
         <nav class="header__navbar">
             <ul class="header__list">
 
@@ -35,9 +38,6 @@
                 </li>
                 <li class="header__item">
                     <a rel="search" href="#projects" class="header__link">Projects</a>
-                </li>
-                <li class="header__item">
-                    <a rel="search" href="#footer" class="header__link">Footer</a>
                 </li>
             </ul>
         </nav>
@@ -275,7 +275,7 @@
             </section>
         </section>
     </main>
-    <footer class="footer" id="footer">Designed and built by Jose Berrios</footer>
+    <footer class="footer">Designed and built by Jose Berrios</footer>
     <div class="cover" id="cover">
         <span class="cover__spinner"></span>
     </div>
