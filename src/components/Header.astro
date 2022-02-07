@@ -1,4 +1,24 @@
-.header {
+<header class="header">
+	<button class="header__switcher" title="Switch theme">
+		<span class="icon icon--sun icon--moon" id="switcher"></span>
+	</button>
+	<nav class="header__navbar">
+		<ul class="header__list">
+			<li class="header__item">
+				<a rel="search" href="#aboutMe" class="header__link">About Me</a>
+			</li>
+			<li class="header__item">
+				<a rel="search" href="#experience" class="header__link">Experience</a>
+			</li>
+			<li class="header__item">
+				<a rel="search" href="#projects" class="header__link">Projects</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style lang="scss">
+	.header {
     display: flex;
     align-items: center;
     padding-right: min(2%, 2em);
@@ -59,3 +79,4 @@
         transform: rotateZ(360deg);
     }
 }
+</style>

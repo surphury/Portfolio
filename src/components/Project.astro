@@ -1,0 +1,55 @@
+---
+const { title, img, tags, description, preview, code} = Astro.props;
+---
+<section class="project">
+	<img src={`assets/images/projects/${img}`} alt={title} class="project__image">
+	<div class="project__body">
+		<header class="project__header">
+			<h3 class="project__title">{title}</h3>
+		</header>
+		<div class="project__tag-list">
+		{
+		tags.map((tag) => (
+			<span class="project__tag tag">{tag}</span>
+  		))
+  		}
+		</div>
+		<p class="project__text">{description}</p>
+		<div class="project__actions">
+			<a href={preview} rel="external" target="_blank"
+				class="button">Preview</a>
+			<a href={code} rel="external" target="_blank"
+				class="button button--reverse">Code</a>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+.project {
+    border-radius: 0.5em;
+    background-color: var(--secondary-bg-colour);
+    padding: 1em;
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 1em;
+    }
+}
+
+@media only screen and (min-width: 1070px) {
+    .project {
+        display: flex;
+        gap: 1em;
+        flex-basis: 45%;
+        &__body {
+            flex-grow: 1;
+        }
+
+        &__image {
+            max-width: 25rem;
+        }
+    }
+}
+</style>

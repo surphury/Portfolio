@@ -1,14 +1,14 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "My personal portfolio",
-  "main": "script.js",
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "sass -w scss:css"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "author": "Surphury",
-  "license": "ISC",
   "devDependencies": {
-    "sass": "1.42.1"
+    "astro": "^0.22.20"
   }
 }

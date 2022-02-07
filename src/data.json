@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Landing Page",
+		"img": "fylo-dark-theme.webp",
+		"tags": [
+			"HTML",
+			"CSS",
+			"Javascript"
+		],
+		"description": "Landing Page made CSS HTML and JavaScript with form email validation",
+		"preview": "https://surphury.github.io/fylo-dark-theme-landing-page/index.html",
+		"code": "https://github.com/surphury/fylo-dark-theme-landing-page"
+	}
+]
