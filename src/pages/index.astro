@@ -1,20 +1,13 @@
 ---
-// Component Imports
-import data from "../data.json"
+import data from "../data.json";
+
 import Header from "../components/Header.astro";
 import Project from "../components/Project.astro";
-// You can import components from any supported Framework here!
+import Footer from "../components/Footer.astro";
+import Profile from "../components/Profile.astro";
+import Experience from "../components/Experience.astro";
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-const ASSETS_PATH = "/assets/images/projects";
 const title = 'Jose Berrios | Web Developer';
-
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 <html lang="en">
 <head>
@@ -30,12 +23,22 @@ const title = 'Jose Berrios | Web Developer';
 </head>
 <body>
 	<Header/>
-	<div>
-	{
-	data.map(({title,img,tags,description,preview,code}) => (
-		<Project title={title} img={img} tags={tags} description={description} preview={preview} code={code} />
-  ))
-  }
-	</div>
+	<Profile/>
+	<Experience/>
+	<main class="main">
+		{
+			data.map(({title,img,tags,description,preview,code}) => (
+				<Project
+				 title={title}
+				 img={img} 
+				 tags={tags} 
+				 description={description} 
+				 preview={preview} 
+				 code={code} 
+				 />
+			))
+		}
+	</main>
+	<Footer/>
 </body>
 </html>

@@ -10,5 +10,73 @@
 		"description": "Landing Page made CSS HTML and JavaScript with form email validation",
 		"preview": "https://surphury.github.io/fylo-dark-theme-landing-page/index.html",
 		"code": "https://github.com/surphury/fylo-dark-theme-landing-page"
+	},
+	{
+		"title": "Order Summary Component",
+		"img": "order-summary.webp",
+		"tags": [
+			"HTML",
+			"CSS"
+		],
+		"description": "The challenge is to build out this order summary card component and get it looking as close to the design as possible.",
+		"preview": "https://surphury.github.io/order-summary-component/index.html",
+		"code": "https://github.com/surphury/order-summary-component"
+	},
+	{
+		"title": "To-do App",
+		"img": "todo-list.webp",
+		"tags": [
+			"HTML",
+			"CSS",
+			"Javascript"
+		],
+		"description": "To-do App to list your tasks in realtime with dark and light mode... It is saved in the localStorage",
+		"preview": "https://surphury.github.io/todo-app/index.html",
+		"code": "https://github.com/surphury/todo-app/"
+	},
+	{
+		"title": "Card Stats",
+		"img": "card-stats.webp",
+		"tags": [
+			"HTML",
+			"CSS"
+		],
+		"description": "Card stats made with CSS & HTML",
+		"preview": "https://surphury.github.io/fylo-dark-theme-landing-page/index.html",
+		"code": "https://github.com/surphury/stats-preview-card-component/"
+	},
+	{
+		"title": "Accordion Card",
+		"img": "acordion.webp",
+		"tags": [
+			"HTML",
+			"CSS"
+		],
+		"description": "Accordion Card made with CSS & HTML",
+		"preview": "https://surphury.github.io/faq-accordion-card/index.html",
+		"code": "https://github.com/surphury/faq-accordion-card"
+	},
+	{
+		"title": "Article Preview Component",
+		"img": "article-preview.webp",
+		"tags": [
+			"HTML",
+			"CSS",
+			"Javascript"
+		],
+		"description": "Article Preview Component built with HTML, CSS & JS",
+		"preview": "https://surphury.github.io/article-preview-component",
+		"code": "https://github.com/surphury/article-preview-component"
+	},
+	{
+		"title": "Social Proof Section",
+		"img": "social-proof.webp",
+		"tags": [
+			"HTML",
+			"CSS"
+		],
+		"description": "Social Proof Section with HTML & CSS",
+		"preview": "https://surphury.github.io/social-proof-section",
+		"code": "https://github.com/surphury/social-proof-section"
 	}
 ]
