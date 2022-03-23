@@ -1,6 +1,6 @@
 <header class="header">
-	<button class="header__switcher" title="Switch theme">
-		<span class="icon icon--sun icon--moon" id="switcher"></span>
+	<button id="switcher" class="header__switcher" title="Switch theme">
+		<span class="icon icon--sun icon--moon"></span>
 	</button>
 	<nav class="header__navbar">
 		<ul class="header__list">
@@ -18,7 +18,7 @@
 </header>
 
 <style lang="scss">
-	.header {
+.header {
     display: flex;
     align-items: center;
     padding-right: min(2%, 2em);
@@ -34,6 +34,9 @@
     &__switcher {
         border-radius: 50%;
         border-width: 0;
+		aspect-ratio: 1/1;
+		width: 2em;
+		background-color: transparent;
     }
 
     &__navbar {
@@ -58,8 +61,8 @@
         text-decoration-line: none;
         position: relative;
         &::before {
-            height: 0.016em;
             content: "";
+            height: 0.10em;
             right: 0;
             left: 0;
             bottom: 0;
@@ -73,10 +76,22 @@
         }
     }
 }
-
-@keyframes rotate {
-    to {
-        transform: rotateZ(360deg);
-    }
-}
 </style>
+
+<script>
+	const $root = document.documentElement,
+		$switcher = document.getElementById('switcher');
+		
+	const changeTheme = () => {
+		$switcher.classList.toggle('icon--moon');
+
+		if ($root.classList.toggle('light-theme'))
+			localStorage.setItem('light-theme', true);
+		else
+			localStorage.clear();
+	}
+
+	localStorage.getItem('light-theme') && changeTheme();
+
+	$switcher.addEventListener('click', changeTheme);
+</script>
