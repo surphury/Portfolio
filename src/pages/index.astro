@@ -7,7 +7,7 @@ import Footer from "../components/Footer.astro";
 import Profile from "../components/Profile.astro";
 import Experience from "../components/Experience.astro";
 
-const title = 'Jose Berrios | Web Developer';
+const title = 'José Berríos | Web Developer';
 ---
 <html lang="en">
 <head>
@@ -17,27 +17,42 @@ const title = 'Jose Berrios | Web Developer';
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<style lang="scss" global>
+		@import "normalize.css";
 		@import "../styles/global.scss";
 		@import "../styles/home.scss";
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			row-gap: 1em;
+		}
 	</style>
+	<style  global>
+		@import "normalize.css";
+	</style>
+
 </head>
 <body>
 	<Header/>
-	<Profile/>
-	<Experience/>
 	<main class="main">
-		{
-			data.map(({title,img,tags,description,preview,code}) => (
-				<Project
-				 title={title}
-				 img={img} 
-				 tags={tags} 
-				 description={description} 
-				 preview={preview} 
-				 code={code} 
-				 />
-			))
-		}
+		<div class="container">
+			<Profile/>
+			<Experience/>
+		</div>
+		<section class="projects">
+			{
+				data.map(({title,img,tags,description,preview,code}) => (
+					<Project
+					title={title}
+					img={img} 
+					tags={tags} 
+					description={description} 
+					preview={preview} 
+					code={code} 
+					/>
+				))
+			}
+		</section>
 	</main>
 	<Footer/>
 </body>
