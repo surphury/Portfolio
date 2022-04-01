@@ -1,22 +1,20 @@
+---
+	import technologies from '../technologies.json';
+---
 <div class="dev" id="aboutMe">
 	<div class="dev__skills">
-		<span class="dev__skill icon icon--html" title="HTML"></span>
-		<span class="dev__skill icon icon--css" title="CSS"></span>
-		<span class="dev__skill icon icon--javascript" title="JavaScript"></span>
-		<span class="dev__skill icon icon--github" title="GitHub"></span>
-		<span class="dev__skill icon icon--git" title="Git"></span>
-		<span class="dev__skill icon icon--sass" title="SASS"></span>
+		{
+			technologies.map(({name, icon}) => {
+				return (
+					<span class={`dev__skill icon icon--${icon}`} title={name}></span>
+				);
+			})
+		}
 	</div>
 	<div class="dev__body">
-		<img src="assets/images/jose-berrios-2.webp" alt="Jose Berrios" class="dev__image">
+		<img src="/assets/images/jose-berrios-2.webp" alt="José Berríos" class="dev__image" decoding="async"/>
 		<div class="dev__container">
-			<h1 class="dev__title">Jose Berrios <strong class="dev__position">Frontend Web
-					Developer</strong></h1>
-
-			<address class="dev__address">
-				<a class="dev__link" href="mailto:surphury@gmail.com">surphury@gmail.com</a>
-				<a class="dev__link" href="tel:+584123618479">+584123618479</a>
-			</address>
+			<h1 class="dev__title">Jose Berrios <strong class="dev__position">Web Developer</strong></h1>
 		</div>
 	</div>
 	<div class="dev__actions">
@@ -51,14 +49,9 @@
         justify-content: center;
     }
 
-    &__address {
-        display: flex;
-        flex-direction: column;
-    }
-
     &__link {
-        display: block;
         text-decoration-line: none;
+		
     }
 
     &__body {
