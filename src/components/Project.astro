@@ -33,55 +33,55 @@
 </section>
 
 <style lang="scss">
-.project {
-    border-radius: 0.5em;
-    background-color: var(--secondary-bg-colour);
-    padding: 1em;
+	.project {
+		border-radius: 0.5em;
+		background-color: var(--secondary-bg-colour);
+		padding: 1em;
 
-    &__actions {
-		display: flex;
-		justify-content: space-between;
-		gap: 1em;
-    }
-
-	&__icon{
-		&--preview, &--code{
-			mask-repeat: no-repeat;
-			mask-position-x: center;
-			mask-position-y: center;
-			width: 1.5em;
-			aspect-ratio: 1 / 1;
-			display: inline-block;
-			overflow: hidden;
-			background-color: currentColor;
+		&__actions {
+			display: flex;
+			justify-content: space-between;
+			gap: 1em;
 		}
 
-		&--preview {
-			mask-image: url(/assets/images/icons/eye.svg);
-		}
+		&__icon{
+			&--preview, &--code {
+				mask-repeat: no-repeat;
+				mask-position-x: center;
+				mask-position-y: center;
+				width: 1.5em;
+				aspect-ratio: 1 / 1;
+				display: inline-block;
+				overflow: hidden;
+				background-color: currentColor;
+			}
 
-		&--code {
-			mask-image: url(/assets/images/icons/laptop.svg);
+			&--preview {
+				mask-image: url(/assets/images/icons/eye.svg);
+			}
+
+			&--code {
+				mask-image: url(/assets/images/icons/laptop.svg);
+			}
 		}
 	}
-}
 
-@media only screen and (min-width: 1070px) {
-    .project {
-        display: flex;
-        gap: 1em;
-        flex-basis: 45%;
+	@media only screen and (min-width: 1070px) {
+		.project {
+			display: flex;
+			gap: 1em;
+			flex-basis: 45%;
 
-        &__body {
-            flex-grow: 1;
-        }
+			&__body {
+				flex-grow: 1;
+			}
 
-        &__image {
-            max-width: 25rem;
-			aspect-ratio: 16 / 9;
-        }
-    }
-}
+			&__image {
+				max-width: 25rem;
+				aspect-ratio: 16 / 9;
+			}
+		}
+	}
 </style>
 
 <style lang="scss">
