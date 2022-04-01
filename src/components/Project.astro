@@ -2,7 +2,7 @@
 	const { title, img, tags, description, preview, code} = Astro.props;
 	const ASSETS_PATH = "/assets/images/projects/";
 ---
-<section class="project">
+<section class="project" id="projects">
 	<img src={ASSETS_PATH + img} alt={title} class="project__image" loading="lazy" decoding="async" />
 	<div class="project__body">
 		<header class="project__header">
