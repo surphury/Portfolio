@@ -1,0 +1,113 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--body-bg-colour);
+	color: var(--txt-colour);
+	font-family: var(--txt-font);
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--title-font);
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+::selection {
+}
+
+::-webkit-scrollbar {
+	width: 0.8em;
+	&-track {
+		background-color: var(--body-bg-colour);
+	}
+
+	&-thumb {
+		border-radius: 1em;
+		background-color: var(--primary-colour);
+	}
+
+	&-button {
+		display: none;
+	}
+}
+
+:root {
+	scroll-behavior: smooth;
+	/* Scroll for Firefox */
+	scrollbar-color: var(--primary-colour) var(--body-bg-colour);
+
+	--txt-colour: #d4d4d4;
+	--body-bg-colour: #262626;
+	--secondary-bg-colour: #333;
+	--primary-colour: #fd7c5c;
+	/* --primary-colour: #ff935d; */
+	--title-font: "Noto Serif", serif;
+	--txt-font: "Raleway", sans-serif;
+
+	/* Minimum size 1 rem at a viewport width of 1500px.
+	Maximum size 2 rem at a viewport width of 2800px. */
+	font-size: clamp(1rem, 1.2vw - 0.2rem, 2rem);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--txt-colour: #d4d4d4;
+		--body-bg-colour: #262626;
+		--secondary-bg-colour: #333;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--txt-colour: #000;
+		--body-bg-colour: #fff;
+		--secondary-bg-colour: #ebebeb;
+	}
+}
+.light-theme {
+	--txt-colour: #000;
+	--body-bg-colour: #fff;
+	--secondary-bg-colour: #ebebeb;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url(/assets/fonts/Raleway-Medium.ttf);
+	local: "Raleway";
+}
+
+@font-face {
+	font-family: "Noto Serif";
+	src: url(/assets/fonts/NotoSerif-Regular.ttf);
+	local: "Noto Serif";
+}
+
+$icon-list: html, css, javascript, linkedin, github, git, sass, sun, moon, menu, rust, astro, react;
+
+.icon {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	z-index: 1;
+	@each $icon in $icon-list {
+		&--#{$icon} {
+			content: url(/assets/images/icons/#{$icon}.svg);
+		}
+	}
+}

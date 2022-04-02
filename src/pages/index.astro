@@ -1,0 +1,69 @@
+---
+	import projects from "../projects.json";
+
+	import Header from "../components/Header.astro";
+	import Project from "../components/Project.astro";
+	import Footer from "../components/Footer.astro";
+	import Profile from "../components/Profile.astro";
+	import Experience from "../components/Experience.astro";
+
+	const title = 'José Berríos | Web Developer';
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<style lang="scss" global>
+		@import "normalize.css";
+		@import "../styles/global.scss";
+		@import "../styles/home.scss";
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			row-gap: 1em;
+		}
+
+		.tag {
+			background-color: var(--primary-colour);
+			color: var(--body-bg-colour);
+			border-radius: 1em;
+			padding: 0.2em 0.8em;
+			font-weight: 900;
+			font-size: 0.7rem;
+			font-family: var(--title-font);
+		}
+	</style>
+	<style global>
+		@import "normalize.css";
+	</style>
+
+</head>
+<body>
+	<Header/>
+	<main class="main">
+		<div class="container">
+			<Profile/>
+			<Experience/>
+		</div>
+		<section class="projects">
+			{
+				projects.map(({title, img, tags, description, preview, code}) => (
+					<Project
+					title={title}
+					img={img} 
+					tags={tags} 
+					description={description} 
+					preview={preview} 
+					code={code} 
+					/>
+				))
+			}
+		</section>
+	</main>
+	<Footer/>
+</body>
+</html>

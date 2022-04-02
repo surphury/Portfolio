@@ -1,0 +1,116 @@
+<header class="header">
+	<button id="switcher" class="header__switcher" title="Switch theme">
+		<span class="icon icon--sun icon--moon"></span>
+	</button>
+	<nav class="header__navbar">
+		<ul class="header__list">
+			<li class="header__item">
+				<a rel="search" href="#aboutMe" class="header__link">About Me</a>
+			</li>
+			<li class="header__item">
+				<a rel="search" href="#experience" class="header__link">Experience</a>
+			</li>
+			<li class="header__item">
+				<a rel="search" href="#projects" class="header__link">Projects</a>
+			</li>
+			<li class="header__item">
+				<a class="header__link header__link--email" href="mailto:surphury@gmail.com" title="Send an email"></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style lang="scss">
+.header {
+    display: flex;
+    align-items: center;
+    padding-right: min(2%, 2em);
+    padding-left: min(2%, 2em);
+    min-height: 3rem;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--secondary-bg-colour);
+
+    &__switcher {
+        border-radius: 50%;
+        border-width: 0;
+		aspect-ratio: 1/1;
+		width: 2em;
+		background-color: transparent;
+    }
+
+    &__navbar {
+        margin-left: auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        column-gap: 2em;
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+
+    &__link {
+        font-weight: 600;
+        text-decoration-line: none;
+        position: relative;
+        &::before {
+            content: "";
+            height: 0.10em;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background-color: var(--primary-colour);
+            transform: scaleX(0);
+            transition: transform 400ms;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
+
+		&--email {
+			&::after {
+				content: "";
+				display: inline-block;
+				overflow: hidden;
+				width: 1.5em;
+				aspect-ratio: 1 / 1;
+				background-color: currentColor;
+				mask-repeat: no-repeat;
+				mask-position-x: center;
+				mask-position-y: center;
+				mask-image: url(/assets/images/icons/mail.svg);
+			}
+		}
+    }
+}
+</style>
+
+<script>
+	const $root = document.documentElement,
+		$switcher = document.getElementById('switcher');
+		
+	const changeTheme = () => {
+		$switcher.classList.toggle('icon--moon');
+
+		if ($root.classList.toggle('light-theme'))
+			localStorage.setItem('light-theme', true);
+		else
+			localStorage.clear();
+	}
+
+	localStorage.getItem('light-theme') && changeTheme();
+
+	$switcher.addEventListener('click', changeTheme);
+</script>

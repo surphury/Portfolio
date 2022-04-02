@@ -1,39 +1,43 @@
+# Welcome to [Astro](https://astro.build)
 
-# Personal Portfolio
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
 
-This is my personal portfolio developed and designed by me.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## 🚀 Project Structure
 
+Inside of your Astro project, you'll see the following folders and files:
 
-## Acknowledgements
+```
+/
+├── public/
+│   ├── robots.txt
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   └── Tour.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-  
-## Authors
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-- [@surphury](https://www.github.com/surphury)
+Any static assets, like images, can be placed in the `public/` directory.
 
-  ## Colour reference
+## 🧞 Commands
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary colour | ![#ff935d](https://via.placeholder.com/10/ff935d?text=+) #ff935d |
+All commands are run from the root of the project, from a terminal:
 
-### Light Mode
+| Command           | Action                                       |
+|:----------------  |:-------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:3000`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Text colour | ![#000](https://via.placeholder.com/10/000?text=+) #000 |
-| Background colour | ![#ebebeb](https://via.placeholder.com/10/ebebeb?text=+) #ebebeb |
-| Secondary colour | ![#333](https://via.placeholder.com/10/333?text=+) #333 |
+## 👀 Want to learn more?
 
-### Dark Mode
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Text colour | ![#d4d4d4](https://via.placeholder.com/10/d4d4d4?text=+) #d4d4d4 |
-| Background colour | ![#262626](https://via.placeholder.com/10/262626?text=+) #262626 |
-| Secondary colour | ![#333](https://via.placeholder.com/10/333?text=+) #333 |
+Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
