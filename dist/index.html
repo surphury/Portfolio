@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>José Berríos | Web Developer</title>
+	<meta name="description" content="José Berriós | Personal portfolio">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	
+
+<link rel="stylesheet" href="/assets/asset.e93d98af.css"></link>
+</head>
+<body>
+	<header class="header astro-QNU27BXQ">
+	<button id="switcher" class="header__switcher astro-QNU27BXQ" title="Switch theme">
+		<span class="icon icon--sun icon--moon astro-QNU27BXQ"></span>
+	</button>
+	<nav class="header__navbar astro-QNU27BXQ">
+		<ul class="header__list astro-QNU27BXQ">
+			<li class="header__item astro-QNU27BXQ">
+				<a rel="search" href="#aboutMe" class="header__link astro-QNU27BXQ">About Me</a>
+			</li>
+			<li class="header__item astro-QNU27BXQ">
+				<a rel="search" href="#experience" class="header__link astro-QNU27BXQ">Experience</a>
+			</li>
+			<li class="header__item astro-QNU27BXQ">
+				<a rel="search" href="#projects" class="header__link astro-QNU27BXQ">Projects</a>
+			</li>
+			<li class="header__item astro-QNU27BXQ">
+				<a class="header__link header__link--email astro-QNU27BXQ" href="mailto:surphury@gmail.com" title="Send an email"></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+
+<script>
+	const $root = document.documentElement,
+		$switcher = document.getElementById('switcher');
+		
+	const changeTheme = () => {
+		$switcher.classList.toggle('icon--moon');
+
+		if ($root.classList.toggle('light-theme'))
+			localStorage.setItem('light-theme', true);
+		else
+			localStorage.clear();
+	}
+
+	localStorage.getItem('light-theme') && changeTheme();
+
+	$switcher.addEventListener('click', changeTheme);
+</script>
+	<main class="main">
+		<div class="container">
+			<div class="dev astro-OZ5IKHC4" id="aboutMe">
+	<div class="dev__skills astro-OZ5IKHC4">
+		<span class="dev__skill icon icon--html astro-OZ5IKHC4" title="HTML"></span><span class="dev__skill icon icon--css astro-OZ5IKHC4" title="CSS"></span><span class="dev__skill icon icon--javascript astro-OZ5IKHC4" title="JavaScript"></span><span class="dev__skill icon icon--react astro-OZ5IKHC4" title="React"></span><span class="dev__skill icon icon--git astro-OZ5IKHC4" title="Git"></span><span class="dev__skill icon icon--github astro-OZ5IKHC4" title="GitHub"></span><span class="dev__skill icon icon--rust astro-OZ5IKHC4" title="Rust"></span><span class="dev__skill icon icon--astro astro-OZ5IKHC4" title="Astro"></span>
+	</div>
+	<div class="dev__body astro-OZ5IKHC4">
+		<img src="/assets/images/jose-berrios-2.webp" alt="José Berríos" class="dev__image astro-OZ5IKHC4" decoding="async">
+		<div class="dev__container astro-OZ5IKHC4">
+			<h1 class="dev__title astro-OZ5IKHC4">Jose Berrios <strong class="dev__position astro-OZ5IKHC4">Web Developer</strong></h1>
+		</div>
+	</div>
+	<div class="dev__actions astro-OZ5IKHC4">
+		<a title="Github" class="dev__link astro-OZ5IKHC4" rel="external" href="https://www.github.com/surphury" target="_blank"><span class="icon icon--github astro-OZ5IKHC4"></span></a>
+		<a title="Linkedin" class="dev__link astro-OZ5IKHC4" rel="external" href="https://www.linkedin.com/in/surphury/" target="_blank"><span class="icon icon--linkedin astro-OZ5IKHC4"></span></a>
+	</div>
+</div>
+
+
+			<section class="experience astro-CGW2IW3X" id="experience">
+	<header class="experience__header astro-CGW2IW3X">
+		<img src="/assets/images/codesociety.png" alt="Code Society" class="experience__image astro-CGW2IW3X" decoding="async">
+		<h3 class="experience__title astro-CGW2IW3X">Frontend Developer</h3>
+	</header>
+	<div class="experience__tag-list astro-CGW2IW3X">
+		<span class="experience__tag tag astro-CGW2IW3X">HTML</span>
+		<span class="experience__tag tag astro-CGW2IW3X">CSS</span>
+		<span class="experience__tag tag astro-CGW2IW3X">JavaScript</span>
+	</div>
+	<p class="experience__text astro-CGW2IW3X">I worked with HTML, CSS and JS. It was an amazing experience... I learnt a lot with that team and I will not forget that experience.</p>
+</section>
+
+
+		</div>
+		<section class="projects" id="projects">
+	<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/fylo-dark-theme.webp" alt="Landing Page" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Landing Page</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span><span class="project__tag tag astro-72GZY7YY">Javascript</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">Landing Page made CSS HTML and JavaScript with form email validation</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/fylo-dark-theme-landing-page/index.html" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/fylo-dark-theme-landing-page" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/order-summary.webp" alt="Order Summary Component" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Order Summary Component</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">The challenge is to build out this order summary card component and get it looking as close to the design as possible.</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/order-summary-component/index.html" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/order-summary-component" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/todo-list.webp" alt="To-do App" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">To-do App</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span><span class="project__tag tag astro-72GZY7YY">Javascript</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">To-do App to list your tasks in realtime with dark and light mode... It is saved in the localStorage</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/todo-app/index.html" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/todo-app/" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/card-stats.webp" alt="Card Stats" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Card Stats</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">Card stats made with CSS &amp; HTML</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/fylo-dark-theme-landing-page/index.html" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/stats-preview-card-component/" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/acordion.webp" alt="Accordion Card" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Accordion Card</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">Accordion Card made with CSS &amp; HTML</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/faq-accordion-card/index.html" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/faq-accordion-card" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/article-preview.webp" alt="Article Preview Component" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Article Preview Component</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span><span class="project__tag tag astro-72GZY7YY">Javascript</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">Article Preview Component built with HTML, CSS &amp; JS</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/article-preview-component" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/article-preview-component" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/social-proof.webp" alt="Social Proof Section" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Social Proof Section</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">Social Proof Section with HTML &amp; CSS</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://surphury.github.io/social-proof-section" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/surphury/social-proof-section" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="project astro-72GZY7YY">
+	<img src="/assets/images/projects/wisptec.webp" alt="Wisptec web page" class="project__image astro-72GZY7YY" loading="lazy" decoding="async">
+	<div class="project__body astro-72GZY7YY">
+		<header class="project__header astro-72GZY7YY">
+			<h3 class="project__title astro-72GZY7YY">Wisptec web page</h3>
+		</header>
+
+		<div class="project__tag-list astro-72GZY7YY">
+			<span class="project__tag tag astro-72GZY7YY">HTML</span><span class="project__tag tag astro-72GZY7YY">CSS</span><span class="project__tag tag astro-72GZY7YY">Javascript</span><span class="project__tag tag astro-72GZY7YY">Astro</span><span class="project__tag tag astro-72GZY7YY">React</span><span class="project__tag tag astro-72GZY7YY">SCSS</span>
+		</div>
+
+		<p class="project__text astro-72GZY7YY">Landing Page using Astro</p>
+
+		<div class="project__actions astro-72GZY7YY">
+			<a href="https://www.wisptecperu.com/" rel="external" target="_blank" class="button astro-72GZY7YY">
+			<span class="project__icon--preview astro-72GZY7YY"></span>
+			Preview
+			</a>
+			<a href="https://github.com/Code-Society-Dev/wisptec-web" rel="external" target="_blank" class="button button--reverse astro-72GZY7YY">
+			<span class="project__icon--code astro-72GZY7YY"></span>
+			Code
+			</a>
+		</div>
+	</div>
+</section>
+
+
+
+
+</section>
+	</main>
+	<footer class="footer astro-3VBBTI5T">
+	Designed and built by Jose Berrios
+</footer>
+
+
+</body></html>
