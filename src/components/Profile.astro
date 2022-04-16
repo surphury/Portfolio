@@ -1,3 +1,31 @@
+---
+	import technologies from '../technologies.json';
+---
+<div class="dev" id="aboutMe">
+	<div class="dev__skills">
+		{
+			technologies.map(({name, icon}) => {
+				return (
+					<span class={`dev__skill icon icon--${icon}`} title={name}></span>
+				);
+			})
+		}
+	</div>
+	<div class="dev__body">
+		<img src="/assets/images/jose-berrios-2.webp" alt="José Berríos" class="dev__image" decoding="async"/>
+		<div class="dev__container">
+			<h1 class="dev__title">Jose Berrios <strong class="dev__position">Web Developer</strong></h1>
+		</div>
+	</div>
+	<div class="dev__actions">
+		<a title="Github" class="dev__link" rel="external" href="https://www.github.com/surphury"
+			target="_blank"><span class="icon icon--github"></span></a>
+		<a title="Linkedin" class="dev__link" rel="external" href="https://www.linkedin.com/in/surphury/"
+			target="_blank"><span class="icon icon--linkedin"></span></a>
+	</div>
+</div>
+
+<style lang="scss">
 .dev {
     border-radius: 0.5em;
     background-color: var(--secondary-bg-colour);
@@ -21,14 +49,9 @@
         justify-content: center;
     }
 
-    &__address {
-        display: flex;
-        flex-direction: column;
-    }
-
     &__link {
-        display: block;
         text-decoration-line: none;
+		
     }
 
     &__body {
@@ -64,3 +87,4 @@
         background-color: var(--primary-colour);
     }
 }
+</style>

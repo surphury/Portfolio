@@ -1,0 +1,34 @@
+[
+	{
+		"name": "HTML",
+		"icon": "html"
+	},
+	{
+		"name": "CSS",
+		"icon": "css"
+	},
+	{
+		"name": "JavaScript",
+		"icon": "javascript"
+	},
+	{
+		"name": "React",
+		"icon": "react"
+	},
+	{
+		"name": "Git",
+		"icon": "git"
+	},
+	{
+		"name": "GitHub",
+		"icon": "github"
+	},
+	{
+		"name": "Rust",
+		"icon": "rust"
+	},
+	{
+		"name": "Astro",
+		"icon": "astro"
+	}
+]
