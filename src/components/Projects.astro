@@ -1,0 +1,26 @@
+---
+	import projects from "../projects.json";
+	import Project from "./Project.astro";
+---
+	
+<section class="projects" id="projects">
+	{
+		projects.map(({title, img, tags, description, preview, code}) => (
+			<Project
+			title={title}
+			img={img} 
+			tags={tags} 
+			description={description} 
+			preview={preview} 
+			code={code} 
+			/>
+		))
+	}
+</section>
+
+<style lang="scss">
+.projects{
+	display: grid;
+	row-gap: 1em;
+}
+</style>

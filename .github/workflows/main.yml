@@ -1,0 +1,39 @@
+on:
+    push:
+        branches:
+            - main
+name: 🚀 Deploy website on push on main
+
+jobs:
+    web-deploy:
+        name: 🎉 Deploy
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🚚 Get latest code
+              uses: actions/checkout@v2
+              with:
+                  submodules: true
+
+            - name: ♲ Use Node.js 14
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '14'
+
+            - name: 🔨 Build Project
+              id: builddeploy
+              run: |
+                  npm cache clean --force
+                  npm install
+                  npm run build
+              env:
+                  NODE_OPTIONS: ${{ '--max_old_space_size=5048' }}
+
+            - name: 📂 Sync files
+              uses: SamKirkland/FTP-Deploy-Action@4.3.0
+              with:
+                  server: ftp.codesociety.dev
+                  username: ${{ secrets.user_deploy }}
+                  password: ${{ secrets.pwd_deploy }}
+                  local-dir: ./dist/
+                  server-dir: ${{ secrets.domain_deploy }}
+                  port: 21
