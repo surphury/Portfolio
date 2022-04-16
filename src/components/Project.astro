@@ -5,6 +5,7 @@
 <section class="project" id="projects">
 	<img src={ASSETS_PATH + img} alt={title} class="project__image" loading="lazy" decoding="async" />
 	<div class="project__body">
+
 		<header class="project__header">
 			<h3 class="project__title">{title}</h3>
 		</header>
@@ -20,13 +21,13 @@
 		<p class="project__text">{description}</p>
 
 		<div class="project__actions">
-			<a href={preview} rel="external" target="_blank" class="button">
-			<span class="project__icon--preview"></span>
-			Preview
+			<a href={preview} rel="external" target="_blank" class="button project__button">
+				<span class="project__icon--preview"></span>
+				Preview
 			</a>
-			<a href={code} rel="external" target="_blank" class="button button--reverse">
-			<span class="project__icon--code"></span>
-			Code
+			<a  href={code} rel="external" target="_blank" class="button button--reverse" class="button project__button">
+			 	<span class="project__icon--code"></span>
+				Code
 			</a>
 		</div>
 	</div>
@@ -38,10 +39,40 @@
 		background-color: var(--secondary-bg-colour);
 		padding: 1em;
 
+		&__header {
+			grid-area: header;
+		}
+
+		&__text {
+			grid-area: text;
+		}
+
+		&__tag-list{
+			display: flex;
+			column-gap: 0.5ch;
+			grid-area: tags;
+		}
+
+		&__body {
+			display: grid;
+			grid-template-areas: "header"
+								"tags"
+								"text"
+								"actions";
+			grid-template-rows: auto auto auto 1fr;
+		}
+
+		&__image {
+			border-radius: 0.5ch;
+			aspect-ratio: 16 / 9;
+		}
+
 		&__actions {
+			grid-area: actions;
 			display: flex;
 			justify-content: space-between;
 			gap: 1em;
+			align-self: end;
 		}
 
 		&__icon{
@@ -70,7 +101,6 @@
 		.project {
 			display: flex;
 			gap: 1em;
-			flex-basis: 45%;
 
 			&__body {
 				flex-grow: 1;
@@ -78,7 +108,6 @@
 
 			&__image {
 				max-width: 25rem;
-				aspect-ratio: 16 / 9;
 			}
 		}
 	}
