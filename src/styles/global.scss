@@ -51,6 +51,7 @@ img {
 	scroll-behavior: smooth;
 	/* Scroll for Firefox */
 	scrollbar-color: var(--primary-colour) var(--body-bg-colour);
+	scroll-padding-top: 3rem;
 
 	--txt-colour: #d4d4d4;
 	--body-bg-colour: #262626;
@@ -109,5 +110,15 @@ $icon-list: html, css, javascript, linkedin, github, git, sass, sun, moon, menu,
 		&--#{$icon} {
 			content: url(/assets/images/icons/#{$icon}.svg);
 		}
+	}
+}
+
+:target {
+	animation: mark-up 1s;
+}
+
+@keyframes mark-up {
+	to {
+		outline: 0.1em solid var(--primary-colour);
 	}
 }
