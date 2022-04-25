@@ -28,9 +28,6 @@ img {
 	max-width: 100%;
 }
 
-::selection {
-}
-
 ::-webkit-scrollbar {
 	width: 0.8em;
 	&-track {
@@ -58,9 +55,8 @@ img {
 	--secondary-bg-colour: #333;
 	--primary-colour: #fd7c5c;
 	/* --primary-colour: #ff935d; */
-	--title-font: "Noto Serif", serif;
-	--txt-font: "Raleway", sans-serif;
-
+	--title-font: 'Jost', serif;
+	--txt-font: 'Jost', sans-serif;
 	/* Minimum size 1 rem at a viewport width of 1500px.
 	Maximum size 2 rem at a viewport width of 2800px. */
 	font-size: clamp(1rem, 1.2vw - 0.2rem, 2rem);
@@ -88,18 +84,13 @@ img {
 }
 
 @font-face {
-	font-family: "Raleway";
-	src: url(/assets/fonts/Raleway-Medium.ttf);
-	local: "Raleway";
+	font-family: 'Jost';
+	src: url(/assets/fonts/Jost.ttf);
+	local: 'Jost';
 }
 
-@font-face {
-	font-family: "Noto Serif";
-	src: url(/assets/fonts/NotoSerif-Regular.ttf);
-	local: "Noto Serif";
-}
-
-$icon-list: html, css, javascript, linkedin, github, git, sass, sun, moon, menu, rust, astro, react;
+$icon-list: html, css, javascript, linkedin, github, git, sass, sun, moon, menu,
+	rust, astro, react;
 
 .icon {
 	display: inline-block;
