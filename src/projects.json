@@ -2,7 +2,7 @@
 	{
 		"title": "Wisptec web page",
 		"img": "wisptec.webp",
-		"tags": ["Astro", "React", "SCSS"],
+		"tags": ["Astro", "React", "SASS"],
 		"description": "Landing Page developed with Astro",
 		"preview": "https://www.wisptecperu.com/",
 		"code": "https://github.com/Code-Society-Dev/wisptec-web"

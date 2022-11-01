@@ -1,32 +1,52 @@
 ---
-	const { title, img, tags, description, preview, code} = Astro.props;
-	const ASSETS_PATH = "/assets/images/projects/";
+const { title, img, tags, description, preview, code } = Astro.props;
+const ASSETS_PATH = '/assets/images/projects/';
 ---
-<section class="project" id="projects">
-	<img src={ASSETS_PATH + img} alt={title} class="project__image" loading="lazy" decoding="async" />
-	<div class="project__body">
 
+<section class="project" id="projects">
+	<img
+		src={ASSETS_PATH + img}
+		alt={title}
+		class="project__image"
+		loading="lazy"
+		decoding="async"
+	/>
+	<div class="project__body">
 		<header class="project__header">
 			<h3 class="project__title">{title}</h3>
 		</header>
 
 		<div class="project__tag-list">
-			{
-				tags.map((tag) => (
-					<span class="project__tag tag">{tag}</span>
-				))
-			}
+			{tags.map((tag) => {
+			return (
+				<span class="project__tag tag">
+					<span class={`icon icon--${tag.toLowerCase()}`}></span>
+					<span class="project_tag__text">{tag}</span>
+				</span>
+				)
+			})}
 		</div>
 
 		<p class="project__text">{description}</p>
 
 		<div class="project__actions">
-			<a href={preview} rel="external" target="_blank" class="button project__button">
+			<a
+				href={preview}
+				rel="external"
+				target="_blank"
+				class="button project__button"
+			>
 				<span class="project__icon--preview"></span>
 				Preview
 			</a>
-			<a  href={code} rel="external" target="_blank" class="button button--reverse" class="button project__button">
-			 	<span class="project__icon--code"></span>
+			<a
+				href={code}
+				rel="external"
+				target="_blank"
+				class="button button--reverse"
+				class="button project__button"
+			>
+				<span class="project__icon--code"></span>
 				Code
 			</a>
 		</div>
@@ -43,11 +63,18 @@
 			grid-area: header;
 		}
 
+		&__tag {
+			display: inline-grid;
+			grid-template-columns: auto auto;
+			align-items: center;
+			column-gap: 0.5ch;
+		}
+
 		&__text {
 			grid-area: text;
 		}
 
-		&__tag-list{
+		&__tag-list {
 			display: flex;
 			column-gap: 0.5ch;
 			grid-area: tags;
@@ -55,14 +82,16 @@
 
 		&__body {
 			display: grid;
-			grid-template-areas: "header"
-								"tags"
-								"text"
-								"actions";
+			grid-template-areas:
+				'header'
+				'tags'
+				'text'
+				'actions';
 			grid-template-rows: auto auto auto 1fr;
 		}
 
 		&__image {
+			max-width: 100%;
 			border-radius: 0.5ch;
 			aspect-ratio: 16 / 9;
 		}
@@ -75,8 +104,9 @@
 			align-self: end;
 		}
 
-		&__icon{
-			&--preview, &--code {
+		&__icon {
+			&--preview,
+			&--code {
 				mask-repeat: no-repeat;
 				mask-position-x: center;
 				mask-position-y: center;
@@ -114,34 +144,35 @@
 </style>
 
 <style lang="scss">
-.button {
-    text-align: center;
-    background-color: var(--primary-colour);
-    color: var(--body-bg-colour);
-    padding: 0.5em 2em;
-    border-radius: 0.4em;
-    font-weight: 600;
-    text-decoration-line: none;
-	display: inline-flex;
-	align-items: center;
-	column-gap: 0.5ch;
-    &:hover {
-        animation: shadow-inset-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
+	.button {
+		text-align: center;
+		background-color: var(--primary-colour);
+		color: var(--body-bg-colour);
+		padding: 0.5em 2em;
+		border-radius: 0.4em;
+		font-weight: 600;
+		text-decoration-line: none;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 0.5ch;
+		&:hover {
+			animation: shadow-inset-center 0.4s
+				cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		}
 
-	&--reverse {
-		color: var(--primary-colour);
-		background-color: transparent;
-		border: 1px solid;
+		&--reverse {
+			color: var(--primary-colour);
+			background-color: transparent;
+			border: 1px solid;
+		}
 	}
-}
 
-@keyframes shadow-inset-center {
-    0% {
-        box-shadow: inset 0 0 0 0;
-    }
-    100% {
-        box-shadow: inset 0 0 1ch 0;
-    }
-}
+	@keyframes shadow-inset-center {
+		0% {
+			box-shadow: inset 0 0 0 0;
+		}
+		100% {
+			box-shadow: inset 0 0 1ch 0;
+		}
+	}
 </style>

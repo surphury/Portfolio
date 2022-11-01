@@ -116,10 +116,10 @@
 		$switcher = document.getElementById('switcher');
 		
 	const changeTheme = () => {
-		$switcher.classList.toggle('icon--moon');
+		$switcher.firstElementChild.classList.toggle('icon--moon');
 
 		if ($root.classList.toggle('light-theme'))
-			localStorage.setItem('light-theme', true);
+			localStorage.setItem('light-theme', "");
 		else
 			localStorage.clear();
 	}

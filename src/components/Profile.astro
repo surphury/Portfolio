@@ -1,90 +1,109 @@
 ---
-	import technologies from '../technologies.json';
+import technologies from '../technologies.json';
 ---
+
 <div class="dev" id="aboutMe">
 	<div class="dev__skills">
 		{
-			technologies.map(({name, icon}) => {
-				return (
-					<span class={`dev__skill icon icon--${icon}`} title={name}></span>
-				);
-			})
+			technologies.map(({ name, icon }) => (
+				<span class={`dev__skill icon icon--${icon}`} title={name} />
+			))
 		}
 	</div>
 	<div class="dev__body">
-		<img src="/assets/images/jose-berrios-2.webp" alt="José Berríos" class="dev__image" decoding="async"/>
+		<img
+			src="/assets/images/jose-berrios.webp"
+			alt="José Berríos"
+			class="dev__image"
+			decoding="async"
+		/>
 		<div class="dev__container">
-			<h1 class="dev__title">Jose Berrios <strong class="dev__position">Web Developer</strong></h1>
+			<h1 class="dev__title">
+				Jose Berrios <strong class="dev__position">
+					Web Developer
+				</strong>
+			</h1>
 		</div>
 	</div>
 	<div class="dev__actions">
-		<a title="Github" class="dev__link" rel="external" href="https://www.github.com/surphury"
-			target="_blank"><span class="icon icon--github"></span></a>
-		<a title="Linkedin" class="dev__link" rel="external" href="https://www.linkedin.com/in/surphury/"
-			target="_blank"><span class="icon icon--linkedin"></span></a>
+		<a
+			title="Github"
+			class="dev__link"
+			rel="external"
+			href="https://www.github.com/surphury"
+			target="_blank"
+			><span class="icon icon--github"></span>
+		</a>
+		<a
+			title="Linkedin"
+			class="dev__link"
+			rel="external"
+			href="https://www.linkedin.com/in/surphury/"
+			target="_blank"
+			><span class="icon icon--linkedin"></span>
+		</a>
 	</div>
 </div>
 
 <style lang="scss">
-.dev {
-    border-radius: 0.5em;
-    background-color: var(--secondary-bg-colour);
-    overflow: hidden;
+	.dev {
+		border-radius: 0.5em;
+		background-color: var(--secondary-bg-colour);
+		overflow: hidden;
 
-    &__title {
-        font-size: inherit;
-        margin-top: 0;
-        margin-bottom: 0;
-        text-shadow: -1px -1px var(--primary-colour);
-    }
+		&__title {
+			font-size: inherit;
+			margin-top: 0;
+			margin-bottom: 0;
+			text-shadow: -1px 0 var(--primary-colour);
+		}
 
-    &__position {
-        display: block;
-    }
+		&__position {
+			display: block;
+		}
 
-    &__container {
-        font-size: 0.9rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+		&__container {
+			font-size: 0.9rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-    &__link {
-        text-decoration-line: none;
-		
-    }
+		&__link {
+			text-decoration-line: none;
+		}
 
-    &__body {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-self: center;
-        column-gap: 1em;
-    }
+		&__body {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			align-self: center;
+			column-gap: 1em;
+		}
 
-    &__image {
-        max-height: 6rem;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        object-fit: contain;
-    }
+		&__image {
+			max-height: 6rem;
+			object-fit: cover;
+			aspect-ratio: 3 / 4;
+			object-position: top;
+		}
 
-    &__skills {
-        display: flex;
-        justify-content: space-around;
-    }
+		&__skills {
+			display: flex;
+			justify-content: space-around;
+		}
 
-    &__skill {
-        border-bottom-left-radius: 25%;
-        border-bottom-right-radius: 25%;
-        background-color: var(--primary-colour);
-        cursor: help;
-    }
+		&__skill {
+			border-bottom-left-radius: 25%;
+			border-bottom-right-radius: 25%;
+			background-color: var(--primary-colour);
+			cursor: help;
+		}
 
-    &__actions {
-        display: flex;
-        justify-content: center;
-        background-color: var(--primary-colour);
-    }
-}
+		&__actions {
+			display: flex;
+			justify-content: center;
+			background-color: var(--primary-colour);
+		}
+	}
 </style>

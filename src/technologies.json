@@ -30,5 +30,13 @@
 	{
 		"name": "Astro",
 		"icon": "astro"
+	},
+	{
+		"name": "SASS",
+		"icon": "sass"
+	},
+	{
+		"name": "TypeScript",
+		"icon": "typescript"
 	}
 ]
